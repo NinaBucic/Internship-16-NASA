@@ -1,8 +1,14 @@
+import ErrorFallback from "./components/ErrorFallback";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { ErrorBoundary } from "react-error-boundary";
+
 function App() {
   return (
-    <>
-      <h1>App</h1>
-    </>
+    <ThemeProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <h1>App</h1>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 
