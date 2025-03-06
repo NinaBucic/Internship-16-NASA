@@ -1,8 +1,10 @@
 @import url("./fonts.css");
 
 :root {
-  --background-color: #f2f2f2;
-  --text-color: #121212;
+  --background-color: white;
+  --text-color: black;
+  --main-color: mediumslateblue;
+  --gray-color: darkgrey;
 }
 
 [data-theme="dark"] {
@@ -26,4 +28,15 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
 }
