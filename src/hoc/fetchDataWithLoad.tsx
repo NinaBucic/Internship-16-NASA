@@ -47,8 +47,6 @@ export function fetchDataWithLoad<T, P extends FetchDataWithLoadProps<T>>(
 
     if (error) throw error;
 
-    return (
-      <WrappedComponent fetchedData={fetchedData as T} {...(props as P)} />
-    );
+    return <WrappedComponent {...(props as P)} data={fetchedData as T} />;
   };
 }
