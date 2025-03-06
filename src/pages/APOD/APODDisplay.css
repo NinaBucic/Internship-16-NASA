@@ -1,1 +1,56 @@
+.apod-container {
+  padding: 60px 32px;
+  text-align: center;
+}
 
+.no-data {
+  padding: 60px 32px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.apod-meaning {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.apod-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 60px;
+}
+
+.apod-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow-wrap: break-word;
+  box-shadow: 0 4px 8px var(--gray-color);
+  height: 350px;
+  padding: 1rem;
+}
+
+.apod-image,
+.apod-video {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.apod-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.apod-title {
+  padding-top: 10px;
+}
+
+.apod-date {
+  padding-top: 10px;
+  font-size: 14px;
+  color: var(--gray-color);
+}

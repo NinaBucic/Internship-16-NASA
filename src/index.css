@@ -40,3 +40,10 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+h1 {
+  color: var(--main-color);
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 700;
+}

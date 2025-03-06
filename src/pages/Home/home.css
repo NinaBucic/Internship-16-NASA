@@ -11,13 +11,6 @@
   flex: 0 auto;
 }
 
-.about-wrapper h1 {
-  color: var(--main-color);
-  font-size: 80px;
-  line-height: 80px;
-  font-weight: 700;
-}
-
 .about-wrapper p {
   margin-top: 32px;
   font-size: 24px;

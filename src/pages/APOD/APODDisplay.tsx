@@ -14,7 +14,11 @@ export const APODDisplay: React.FC<APODDisplayProps> = ({ data }) => {
 
   return (
     <div className="apod-container">
-      <h1>Astronomy Picture of the Day (APOD)</h1>
+      <h1>APOD</h1>
+      <p className="apod-meaning">
+        APOD stands for <i>Astronomy Picture of the Day</i>. This page displays
+        images and videos from the NASA APOD API.
+      </p>
       <div className="apod-gallery">
         {data.map((item) => {
           if (item.media_type === "image") {
@@ -49,6 +53,8 @@ export const APODDisplay: React.FC<APODDisplayProps> = ({ data }) => {
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
                     {item.url}
                   </a>
+                  <p className="apod-title">{item.title}</p>
+                  <p className="apod-date">{item.date}</p>
                 </div>
               );
             }
@@ -56,6 +62,8 @@ export const APODDisplay: React.FC<APODDisplayProps> = ({ data }) => {
             return (
               <div key={item.date} className="apod-item">
                 <p>Unsupported media type: {item.media_type}</p>
+                <p className="apod-title">{item.title}</p>
+                <p className="apod-date">{item.date}</p>
               </div>
             );
           }
