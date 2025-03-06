@@ -1,0 +1,54 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 32px;
+  padding-bottom: 0;
+}
+
+.about-wrapper {
+  width: 60%;
+  flex: 0 auto;
+}
+
+.about-wrapper h1 {
+  color: var(--main-color);
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 700;
+}
+
+.about-wrapper p {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.about-wrapper div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.planet-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  flex: 1;
+}
+
+.planet {
+  width: 400px;
+  height: auto;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
