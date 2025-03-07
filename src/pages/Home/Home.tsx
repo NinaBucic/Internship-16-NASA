@@ -16,30 +16,10 @@ export const Home: FC = () => {
         </p>
 
         <div>
-          <Link
-            to={ROUTES.APOD}
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
-          >
-            🌌 Astronomy Picture of the Day (APOD)
-          </Link>
-          <Link
-            to={ROUTES.MARS_ROVER}
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
-          >
-            🚀 Mars Rover Photos
-          </Link>
-          <Link
-            to={ROUTES.NEO}
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
-          >
-            🛰️ Near Earth Objects (NEO) Tracker
-          </Link>
-          <Link
-            to={ROUTES.EARTH}
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
-          >
-            🌍 Earth Imagery
-          </Link>
+          <Link to={ROUTES.APOD}>🌌 Astronomy Picture of the Day (APOD)</Link>
+          <Link to={ROUTES.MARS_ROVER}>🚀 Mars Rover Photos</Link>
+          <Link to={ROUTES.NEO}>🛰️ Near Earth Objects (NEO) Tracker</Link>
+          <Link to={ROUTES.EARTH}>🌍 Earth Imagery</Link>
         </div>
       </div>
 
