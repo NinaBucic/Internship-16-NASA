@@ -1,6 +1,6 @@
 import { ComponentType, useEffect, useState } from "react";
 import { useErrorHandler } from "../hooks/useErrorHandler";
-import "./fetchDataWithLoad.css";
+import { Loader } from "../components/Loader";
 
 type FetchDataFunction<T> = () => Promise<T>;
 
@@ -38,11 +38,7 @@ export function fetchDataWithLoad<T, P extends FetchDataWithLoadProps<T>>(
     }, []);
 
     if (isLoading) {
-      return (
-        <div className="loader-container">
-          <div className="spinner"></div>
-        </div>
-      );
+      return <Loader />;
     }
 
     if (error) throw error;

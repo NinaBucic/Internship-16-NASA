@@ -3,7 +3,7 @@ import { getDateRange } from "../utils/getDateRange";
 import { getAPODUrl } from "./apiPaths";
 
 export async function fetchAPODData() {
-  const { startDate, endDate } = getDateRange(19);
+  const { startDate, endDate } = getDateRange(20);
   const url = getAPODUrl(API_KEY, startDate, endDate);
 
   const response = await fetch(url);
