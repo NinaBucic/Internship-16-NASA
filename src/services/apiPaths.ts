@@ -26,3 +26,13 @@ export const getMarsRoverPhotosUrl = (
   }
   return url;
 };
+
+export const NEO_FEED_BASE = "https://api.nasa.gov/neo/rest/v1/feed";
+
+export const getNEOFeedUrl = (
+  apiKey: string,
+  startDate: string,
+  endDate: string
+): string => {
+  return `${NEO_FEED_BASE}?api_key=${apiKey}&start_date=${startDate}&end_date=${endDate}`;
+};
