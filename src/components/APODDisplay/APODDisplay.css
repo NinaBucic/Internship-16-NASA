@@ -1,26 +1,10 @@
-.apod-container {
-  padding: 60px 32px;
-  text-align: center;
-}
-
-.no-data {
-  padding: 60px 32px;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.apod-meaning {
-  margin-top: 32px;
-  font-size: 24px;
-  line-height: 32px;
-  color: var(--gray-color);
-}
-
 .apod-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 60px;
+  padding: 60px 32px;
+  text-align: center;
 }
 
 .apod-item {

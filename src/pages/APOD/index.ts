@@ -1,2 +1,3 @@
 export * from "./APOD.tsx";
-export * from "./APODDisplay.tsx";
+export * from "../../components/APODDisplay/APODDisplay.tsx";
+export * from "./APODDetail.tsx";
