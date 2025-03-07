@@ -1,0 +1,43 @@
+.neo-tracker-container {
+  padding: 60px 32px;
+  text-align: center;
+}
+
+.neo-description {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.chart-container {
+  margin: 35px auto;
+  max-width: 800px;
+}
+
+.neo-cards-container {
+  margin-top: 30px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.neo-date-group {
+  margin-bottom: 30px;
+}
+
+.neo-date-group h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.neo-date-group hr {
+  margin-bottom: 10px;
+}
+
+.neo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

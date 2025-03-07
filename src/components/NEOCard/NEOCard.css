@@ -1,0 +1,21 @@
+.neo-card {
+  flex: 1 1 250px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px var(--gray-color);
+}
+
+.neo-card h4 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.neo-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.neo-card span {
+  color: var(--gray-color);
+}

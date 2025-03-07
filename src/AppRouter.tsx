@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import { Home } from "./pages/Home";
 import { APOD, APODDetail } from "./pages/APOD";
 import { MarsRover, MarsRoverDetail } from "./pages/MarsRover";
+import { NEOTracker } from "./pages/NEOTracker";
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
             path={ROUTES.MARS_ROVER_DETAIL}
             element={<MarsRoverDetail />}
           />
+          <Route path={ROUTES.NEO} element={<NEOTracker />} />
         </Route>
       </Routes>
     </BrowserRouter>
