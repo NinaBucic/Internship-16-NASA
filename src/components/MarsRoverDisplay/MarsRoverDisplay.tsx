@@ -23,6 +23,7 @@ export const MarsRoverDisplay: React.FC<MarsRoverDisplayProps> = ({ data }) => {
             alt={`Photo ${photo.id}`}
             className="mars-photo"
           />
+          <p className="mars-photo-camera">{photo.camera.name}</p>
           <p className="mars-photo-date">{photo.earth_date}</p>
         </div>
       ))}
