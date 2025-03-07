@@ -37,12 +37,30 @@ export const APODDetail: React.FC = () => {
   if (loading) return <Loader />;
   if (error)
     return (
-      <div style={{ textAlign: "center", margin: "2rem" }}>Error: {error}</div>
+      <div className="apod-detail-media">
+        <div style={{ textAlign: "center", margin: "2rem" }}>
+          Error: {error}
+        </div>
+        <button
+          className="apod-detail-back-button"
+          onClick={() => navigate("/apod")}
+        >
+          GO BACK TO APOD
+        </button>
+      </div>
     );
   if (!data)
     return (
-      <div style={{ textAlign: "center", margin: "2rem" }}>
-        No detail available.
+      <div className="apod-detail-media">
+        <div style={{ textAlign: "center", margin: "2rem" }}>
+          No details available.
+        </div>
+        <button
+          className="apod-detail-back-button"
+          onClick={() => navigate("/apod")}
+        >
+          GO BACK TO APOD
+        </button>
       </div>
     );
 
@@ -51,31 +69,33 @@ export const APODDetail: React.FC = () => {
       <h1>{data.title}</h1>
       <p className="apod-detail-date">{data.date}</p>
       <p className="apod-detail-explanation">{data.explanation}</p>
-      {data.media_type === "image" ? (
-        <img src={data.url} alt={data.title} className="apod-detail-image" />
-      ) : data.media_type === "video" ? (
-        data.url.includes("youtube.com") || data.url.includes("youtu.be") ? (
-          <iframe
-            title={data.title}
-            src={data.url}
-            className="apod-detail-video"
-            allowFullScreen
-          />
-        ) : (
-          <div>
-            <p>This video cannot be embedded. Please visit the link:</p>
-            <a href={data.url} target="_blank" rel="noopener noreferrer">
-              {data.url}
-            </a>
-          </div>
-        )
-      ) : null}
-      <button
-        className="apod-detail-back-button"
-        onClick={() => navigate("/apod")}
-      >
-        GO BACK TO APOD
-      </button>
+      <div className="apod-detail-media">
+        {data.media_type === "image" ? (
+          <img src={data.url} alt={data.title} className="apod-detail-image" />
+        ) : data.media_type === "video" ? (
+          data.url.includes("youtube.com") || data.url.includes("youtu.be") ? (
+            <iframe
+              title={data.title}
+              src={data.url}
+              className="apod-detail-video"
+              allowFullScreen
+            />
+          ) : (
+            <div className="apod-detail-other-media">
+              <p>This video cannot be embedded. Please visit the link:</p>
+              <a href={data.url} target="_blank" rel="noopener noreferrer">
+                {data.url}
+              </a>
+            </div>
+          )
+        ) : null}
+        <button
+          className="apod-detail-back-button"
+          onClick={() => navigate("/apod")}
+        >
+          GO BACK TO APOD
+        </button>
+      </div>
     </div>
   );
 };

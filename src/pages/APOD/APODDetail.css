@@ -1,0 +1,37 @@
+.apod-detail-container {
+  padding: 60px 32px;
+}
+
+.apod-detail-container h1 {
+  width: 50%;
+}
+
+.apod-detail-date {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.apod-detail-explanation {
+  margin-top: 50px;
+}
+
+.apod-detail-media {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.apod-detail-image,
+.apod-detail-video,
+.apod-detail-other-media {
+  max-height: 500px;
+  margin-top: 50px;
+}
+
+.apod-detail-other-media {
+  text-align: center;
+}
