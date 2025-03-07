@@ -93,25 +93,27 @@ export const APOD: React.FC = () => {
         images and videos from the NASA APOD API.
       </p>
       <div className="filter-container">
-        <label htmlFor="startDate">Start Date:</label>
-        <input
-          type="date"
-          id="startDate"
-          value={startDate}
-          max={endDate}
-          onChange={handleStartDateChange}
-        />
-        <label htmlFor="endDate">End Date:</label>
-        <input
-          type="date"
-          id="endDate"
-          value={endDate}
-          max={today}
-          onChange={handleEndDateChange}
-        />
-        <button onClick={handleClearFilters}>Clear Filters</button>
+        <div className="filter-inputs">
+          <label htmlFor="startDate">Start Date:</label>
+          <input
+            type="date"
+            id="startDate"
+            value={startDate}
+            max={endDate}
+            onChange={handleStartDateChange}
+          />
+          <label htmlFor="endDate">End Date:</label>
+          <input
+            type="date"
+            id="endDate"
+            value={endDate}
+            max={today}
+            onChange={handleEndDateChange}
+          />
+        </div>
+        {error && <div className="error">{error}</div>}
+        <button onClick={handleClearFilters}>CLEAR FILTERS</button>
       </div>
-      {error && <div className="error">{error}</div>}
       {loading && data.length === 0 && (
         <div className="initial-loader">
           <Loader />
@@ -135,7 +137,7 @@ export const APOD: React.FC = () => {
       )}
       {!loading && hasMore && (
         <div className="load-more-container">
-          <button onClick={handleLoadMore}>Load Older Photos</button>
+          <button onClick={handleLoadMore}>LOAD OLDER PHOTOS</button>
         </div>
       )}
     </div>
