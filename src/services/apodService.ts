@@ -1,9 +1,9 @@
 import { API_KEY } from "../constants/apiKey";
-import { getDateRange } from "../utils/getDateRange";
+import { getDefaultDateRange } from "../utils/getDateRange";
 import { getAPODUrl } from "./apiPaths";
 
 export async function fetchAPODData() {
-  const { startDate, endDate } = getDateRange(20);
+  const { startDate, endDate } = getDefaultDateRange(20);
   const url = getAPODUrl(API_KEY, startDate, endDate);
 
   const response = await fetch(url);
