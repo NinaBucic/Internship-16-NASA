@@ -1,0 +1,38 @@
+.mars-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 32px 32px;
+  text-align: center;
+}
+
+.mars-photo-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow-wrap: break-word;
+  box-shadow: 0 4px 8px var(--gray-color);
+  height: 350px;
+  padding: 1rem;
+}
+
+.mars-photo {
+  height: 224px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mars-photo-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.mars-photo-camera {
+  padding-top: 10px;
+}
+
+.mars-photo-date {
+  padding-top: 10px;
+  font-size: 14px;
+  color: var(--gray-color);
+}

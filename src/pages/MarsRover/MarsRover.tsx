@@ -4,6 +4,7 @@ import { MarsRoverPhoto } from "../../types/marsRoverPhoto";
 import { fetchMarsRoverPhotos } from "../../services/marsRoverService";
 import { Loader } from "../../components/Loader";
 import { MarsRoverDisplay } from "../../components/MarsRoverDisplay";
+import "./MarsRover.css";
 
 const availableCameras = [
   "ALL",
@@ -66,7 +67,13 @@ export const MarsRover = () => {
 
   return (
     <div className="mars-page-container">
-      <div className="filter-container">
+      <h1>MARS ROVER PHOTOS</h1>
+      <p className="mars-page-about">
+        Image data gathered by NASA's Curiosity rover on Mars. Each camera has a
+        unique function and perspective.
+        <br /> Select a date to view photos taken on that day.
+      </p>
+      <div className="mars-filter-inputs">
         <label htmlFor="earthDate">Earth Date:</label>
         <input
           type="date"
@@ -98,13 +105,13 @@ export const MarsRover = () => {
       ) : (
         <MarsRoverDisplay data={data} />
       )}
-      <div className="pagination">
+      <div className="mars-pagination">
         <button onClick={handlePreviousPage} disabled={page === 1}>
-          Previous
+          PREVIOUS
         </button>
         <span>Page {page}</span>
         <button onClick={handleNextPage} disabled={data.length === 0}>
-          Next
+          NEXT
         </button>
       </div>
     </div>

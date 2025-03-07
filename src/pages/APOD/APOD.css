@@ -39,6 +39,8 @@
 .filter-inputs input {
   background-color: lightgray;
   padding: 0 0.5rem;
+  border: none;
+  cursor: pointer;
 }
 
 .filter-container .error {

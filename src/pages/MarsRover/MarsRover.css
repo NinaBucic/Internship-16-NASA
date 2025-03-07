@@ -1,0 +1,54 @@
+.mars-page-container {
+  padding: 60px 32px;
+  text-align: center;
+}
+
+.mars-page-about {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.mars-filter-inputs {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mars-filter-inputs input,
+.mars-filter-inputs select {
+  background-color: lightgray;
+  padding: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.mars-page-container .error {
+  color: red;
+}
+
+.no-data {
+  padding: 60px 32px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.mars-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mars-pagination button {
+  padding: 0.5rem 0.5rem;
+  width: 100px;
+}
+
+.mars-pagination button:disabled {
+  background-color: var(--dark-main-color);
+  cursor: not-allowed;
+}
