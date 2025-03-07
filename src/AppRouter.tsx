@@ -3,7 +3,7 @@ import { ROUTES } from "./constants/routes";
 import Layout from "./components/Layout";
 import { Home } from "./pages/Home";
 import { APOD, APODDetail } from "./pages/APOD";
-import { MarsRover } from "./pages/MarsRover";
+import { MarsRover, MarsRoverDetail } from "./pages/MarsRover";
 
 const AppRouter = () => {
   return (
@@ -14,6 +14,10 @@ const AppRouter = () => {
           <Route path={ROUTES.APOD} element={<APOD />} />
           <Route path={ROUTES.APOD_DETAIL} element={<APODDetail />} />
           <Route path={ROUTES.MARS_ROVER} element={<MarsRover />} />
+          <Route
+            path={ROUTES.MARS_ROVER_DETAIL}
+            element={<MarsRoverDetail />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

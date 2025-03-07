@@ -15,7 +15,9 @@ export const MarsRoverDisplay: React.FC<MarsRoverDisplayProps> = ({ data }) => {
         <div
           key={photo.id}
           className="mars-photo-item"
-          onClick={() => navigate(`/mars/${photo.id}`)}
+          onClick={() =>
+            navigate(`/mars-rover/${photo.earth_date}/${photo.id}`)
+          }
           style={{ cursor: "pointer" }}
         >
           <img
