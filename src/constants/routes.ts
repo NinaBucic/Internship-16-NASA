@@ -10,4 +10,5 @@ export const ROUTES: Routes = {
   MARS_ROVER_DETAIL: "/mars-rover/:earthDate/:id",
   NEO: "/neo",
   EARTH: "/earth",
+  NOT_FOUND: "*",
 };

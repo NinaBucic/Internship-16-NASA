@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { APOD, APODDetail } from "./pages/APOD";
 import { MarsRover, MarsRoverDetail } from "./pages/MarsRover";
 import { NEOTracker } from "./pages/NEOTracker";
+import { NotFound } from "./pages/NotFound";
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
             element={<MarsRoverDetail />}
           />
           <Route path={ROUTES.NEO} element={<NEOTracker />} />
+          <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
