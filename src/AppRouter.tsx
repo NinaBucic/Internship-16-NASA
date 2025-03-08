@@ -6,6 +6,7 @@ import { APOD, APODDetail } from "./pages/APOD";
 import { MarsRover, MarsRoverDetail } from "./pages/MarsRover";
 import { NEOTracker } from "./pages/NEOTracker.tsx";
 import { NotFound } from "./pages/NotFound";
+import { EarthPage } from "./pages/Earth";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
             element={<MarsRoverDetail />}
           />
           <Route path={ROUTES.NEO} element={<NEOTracker />} />
+          <Route path={ROUTES.EARTH} element={<EarthPage />} />
           <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
         </Route>
       </Routes>
