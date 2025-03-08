@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import { Home } from "./pages/Home";
 import { APOD, APODDetail } from "./pages/APOD";
 import { MarsRover, MarsRoverDetail } from "./pages/MarsRover";
-import { NEOTracker } from "./pages/NEOTracker";
+import { NEOTracker } from "./pages/NEOTracker.tsx";
 import { NotFound } from "./pages/NotFound";
 
 const AppRouter = () => {

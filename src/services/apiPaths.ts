@@ -36,3 +36,19 @@ export const getNEOFeedUrl = (
 ): string => {
   return `${NEO_FEED_BASE}?api_key=${apiKey}&start_date=${startDate}&end_date=${endDate}`;
 };
+
+export const EARTH_ASSETS_BASE = "https://api.nasa.gov/planetary/earth/assets";
+
+export const getEarthAssetsUrl = (
+  apiKey: string,
+  lon: number,
+  lat: number,
+  date: string,
+  dim?: number
+): string => {
+  let url = `${EARTH_ASSETS_BASE}?api_key=${apiKey}&lon=${lon}&lat=${lat}&date=${date}`;
+  if (dim) {
+    url += `&dim=${dim}`;
+  }
+  return url;
+};
